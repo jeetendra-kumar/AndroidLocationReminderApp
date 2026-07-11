@@ -1,0 +1,85 @@
+Initialized native services in: /Users/jeetendra/.gradle/native
+Initialized jansi services in: /Users/jeetendra/.gradle/native
+The client will now receive all logging from the daemon (pid: 30987). The daemon log file: /Users/jeetendra/.gradle/daemon/9.4.1/daemon-30987.out.log
+Starting 14th build in daemon [uptime: 1 hrs 11 mins 1.623 secs, performance: 96%, GC rate: 0.00/s, heap usage: 1% of 2 GiB]
+Using 10 worker leases.
+Operational build model parameters: {cachingModelBuilding=false, configurationCache=false, configurationCacheDisabledReason=null, configurationCacheParallelLoad=false, configurationCacheParallelStore=false, configureOnDemand=false, invalidateCoupledProjects=false, isolatedProjects=false, modelAsProjectDependency=false, modelBuilding=false, parallelModelBuilding=false, parallelProjectConfiguration=false, parallelProjectExecution=false, resilientModelBuilding=false}
+Now considering [/Users/jeetendra/Documents/AndroidReminderApp, /Users/jeetendra/Documents/NishaFirstApp] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Resolved plugin [id: 'org.gradle.toolchains.foojay-resolver-convention', version: '1.0.0']
+Settings evaluated using settings file '/Users/jeetendra/Documents/AndroidReminderApp/settings.gradle.kts'.
+Projects loaded. Root project using build file '/Users/jeetendra/Documents/AndroidReminderApp/build.gradle.kts'.
+Included projects: [root project 'AndroidReminderApp', project ':app']
+
+> Configure project :
+Evaluating root project 'AndroidReminderApp' using build file '/Users/jeetendra/Documents/AndroidReminderApp/build.gradle.kts'.
+Resolved plugin [id: 'com.android.application', version: '9.1.1', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.compose', version: '2.3.21', apply: false]
+Resolved plugin [id: 'com.google.dagger.hilt.android', version: '2.59.2', apply: false]
+Resolved plugin [id: 'com.google.devtools.ksp', version: '2.3.9', apply: false]
+
+> Configure project :app
+Evaluating project ':app' using build file '/Users/jeetendra/Documents/AndroidReminderApp/app/build.gradle.kts'.
+Resolved plugin [id: 'com.android.application', version: '9.1.1']
+Resolved plugin [id: 'org.jetbrains.kotlin.plugin.compose', version: '2.3.21']
+Resolved plugin [id: 'com.google.dagger.hilt.android', version: '2.59.2']
+Resolved plugin [id: 'com.google.devtools.ksp', version: '2.3.9']
+Build 4de50a51-e9f3-45be-9b53-026f8a4f9927 is started
+Using default execution profile
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+Detected Android Gradle Plugin compose compiler configuration
+All projects evaluated.
+Task path ':app:kspDebugKotlin' matched project ':app'
+Task name matched 'kspDebugKotlin'
+Selected primary task 'kspDebugKotlin' from project :app
+Adding -Xuse-inline-scopes-numbers Kotlin compiler flag for task :app:compileDebugKotlin
+Tasks to be executed: [task ':app:kspDebugKotlin']
+Tasks that were excluded: []
+Resolve mutations for :app:kspDebugKotlin (Thread[#707,Execution worker,5,main]) started.
+:app:kspDebugKotlin (Thread[#707,Execution worker,5,main]) started.
+
+> Task :app:kspDebugKotlin FAILED
+Caching disabled for task ':app:kspDebugKotlin' because:
+  Build cache is disabled
+Task ':app:kspDebugKotlin' is not up-to-date because:
+  Task has failed previously.
+The input changes require a full rebuild for incremental task ':app:kspDebugKotlin'.
+i: [ksp] loaded provider(s): [dagger.hilt.processor.internal.uninstallmodules.KspUninstallModulesProcessor$Provider, dagger.hilt.android.processor.internal.viewmodel.KspViewModelProcessor$Provider, dagger.hilt.processor.internal.earlyentrypoint.KspEarlyEntryPointProcessor$Provider, dagger.hilt.android.processor.internal.androidentrypoint.KspAndroidEntryPointProcessor$Provider, dagger.hilt.processor.internal.definecomponent.KspDefineComponentProcessor$Provider, dagger.hilt.processor.internal.originatingelement.KspOriginatingElementProcessor$Provider, dagger.hilt.android.processor.internal.bindvalue.KspBindValueProcessor$Provider, dagger.hilt.processor.internal.root.KspComponentTreeDepsProcessor$Provider, dagger.hilt.processor.internal.root.KspRootProcessor$Provider, dagger.hilt.processor.internal.aliasof.KspAliasOfProcessor$Provider, dagger.hilt.processor.internal.aggregateddeps.KspAggregatedDepsProcessor$Provider, dagger.hilt.processor.internal.generatesrootinput.KspGeneratesRootInputProcessor$Provider, dagger.hilt.android.processor.internal.customtestapplication.KspCustomTestApplicationProcessor$Provider, androidx.room.RoomKspProcessor$Provider, dagger.internal.codegen.KspComponentProcessor$Provider]
+e: [ksp] InjectProcessingStep was unable to process 'taskRepository' because 'ReminderNotificationManager' could not be resolved.
+
+Dependency trace:
+    => element (CLASS): com.jeet.androidreminderapp.location.GeofenceBroadcastReceiver
+    => element (FIELD): notificationManager
+    => type (ERROR field type): ReminderNotificationManager
+
+If type 'ReminderNotificationManager' is a generated type, check above for compilation errors that may have prevented the type from being generated. Otherwise, ensure that type 'ReminderNotificationManager' is on your classpath.
+e: [ksp] InjectProcessingStep was unable to process 'notificationManager' because 'ReminderNotificationManager' could not be resolved.
+
+Dependency trace:
+    => element (CLASS): com.jeet.androidreminderapp.location.GeofenceBroadcastReceiver
+    => element (FIELD): notificationManager
+    => type (ERROR field type): ReminderNotificationManager
+
+If type 'ReminderNotificationManager' is a generated type, check above for compilation errors that may have prevented the type from being generated. Otherwise, ensure that type 'ReminderNotificationManager' is on your classpath.
+Build 4de50a51-e9f3-45be-9b53-026f8a4f9927 is closed
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:kspDebugKotlin'.
+> A failure occurred while executing com.google.devtools.ksp.gradle.KspAAWorkerAction
+   > KSP failed with exit code: PROCESSING_ERROR
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2s
+1 actionable task: 1 executed
+Watched directory hierarchies: [/Users/jeetendra/Documents/AndroidReminderApp, /Users/jeetendra/Documents/NishaFirstApp]
